@@ -3,9 +3,9 @@
 
 
 ### 示例
-```c#
+
 汉字转拼音
-```
+```c#
 var text = PinYin.GetPinYin("测试文字", PinYinType.拼音);
 //结果为： ce shi wen zi
 ```
