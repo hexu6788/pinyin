@@ -3,15 +3,15 @@
 
 
 ### 示例
-
+```c#
 汉字转拼音
 ```
 var text = PinYin.GetPinYin("测试文字", PinYinType.拼音);
-//text结果为 ce shi wen zi
+//结果为： ce shi wen zi
 ```
 
 汉字转拼音(拼音首字母)
-```
+```c#
 var text = PinYin.GetPinYin("测试文字", PinYinType.拼音首字母);
-//text结果为 CSWZ
+//结果为：  CSWZ
 ```
