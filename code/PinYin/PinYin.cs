@@ -16,10 +16,9 @@ namespace PinYin
 
         private static bool IsChinese(string word)
         {
-            var match = " 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz~!@#$%^&*()_+{}|:\"<>?-=[]\\;',./`、【】《》‘’：；\"";
-            for (var i = 0; i < match.Length; i++)
+            for (var i = 0; i < _chineseLib.SpecialWord.Length; i++)
             {
-                if (word.Equals(match[i].ToString()))
+                if (word.Equals(_chineseLib.SpecialWord[i].ToString()))
                     return false;
             }
             return true;
@@ -33,6 +32,7 @@ namespace PinYin
             text = text.Trim();
             text = _chineseLib.ReplaceTermsAndIdiom(text, type);
             text = _chineseLib.ReplaceWord(text, type);
+            text = _chineseLib.ReplaceSpecialWordSpace(text);
 
             return text.Trim();
         }
